@@ -1,0 +1,270 @@
+/*
+Theme Name: Elegant Fashion
+Theme URI: https://rarathemes.com/wordpress-themes/elegant-fashion/
+Template: chic-lite
+Author: Rara Theme
+Author URI: https://rarathemes.com/
+Description: Elegant Fashion is a feature-rich and easy to use feminine blog theme for professional bloggers. This theme is for you if you want to share your expert fashion tips, travel expertise, your favorite food recipes, or create a lifestyle, beauty and makeup, coaching, or any other niche blog. The theme is mobile friendly, SEO optimized, Schema friendly, and loads faster to help you rank your website higher on search engines.  You can easily choose from unlimited colors and 900+ Google fonts to change your website look and feel with a single click. This theme comes with a strategically placed newsletter section that can help you generate more leads, and Instagram section to flaunt your Instagram posts. Feminine Fashion is translation ready, WooCommerce and RTL compatible. Check demo at https://rarathemes.com/theme-demo/?theme=elegant-fashion, read the documentation at https://docs.rarathemes.com/docs/elegant-fashion/, and get support at https://rarathemes.com/support-ticket/.
+Tags: blog, one-column, two-columns, right-sidebar, left-sidebar, footer-widgets, custom-background, custom-header, custom-menu, custom-logo, featured-images, threaded-comments, full-width-template, rtl-language-support, translation-ready, theme-options, e-commerce, news
+Version: 1.0.3
+Requires at least: 4.7
+Requires PHP: 5.6
+Tested up to: 6.2
+License: GNU General Public License v3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Text Domain: elegant-fashion
+Tags: blog, one-column, two-columns, right-sidebar, left-sidebar, footer-widgets, custom-background, custom-header, custom-menu, custom-logo, featured-images, threaded-comments, full-width-template, rtl-language-support, translation-ready, theme-options, e-commerce
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Chic Lite is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+# varible
+--------------------------------------------------------------*/
+
+:root {
+    --primary-font: 'DM Sans', sans-serif;
+    --secondary-font: 'Nanum Myeongjo', serif;
+    --font-color: #333333;
+    --primary-color: #cf9c88;
+    --primary-color-rgb: 207, 156, 136;
+    --black-color: #000000;
+    --black-color-rgb: 0, 0, 0;
+    --white-color: #ffffff;
+    --white-color-rgb: 255, 255, 255;
+}
+
+/*============================
+HOMEPAGE LAYOUT TWO
+============================*/
+body.post-layout-two .site-main article {
+    border-bottom: 1px solid rgba(var(--primary-color-rgb),0.2);
+    padding-bottom: 48px;
+    margin-bottom: 48px;
+}
+body.post-layout-two .site-main article .entry-header {
+    margin-bottom: 25px;
+}
+body.post-layout-two .site-main article .entry-title {
+    margin-top: 10px;
+    font-size: 2.22em;
+}
+
+.post-layout-two .site-main article span.category{
+	display: inline-block;
+    font-size: 0.6666em;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1.49;
+    letter-spacing: 1px;
+}
+.post-layout-two .site-main article span.category a:hover{
+	color: #121212;
+    text-decoration: none;
+}
+
+.owl-carousel>.owl-nav button[class*="owl-"]{
+	background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: 17px !important;
+}
+
+.nav-menu .close {
+    display: none;
+    background-color: transparent;
+    padding: 0;
+}
+.secondary-menu .secondary-menu-list  .close {
+    display: none;
+}
+
+@media screen and (max-width: 1024px) {
+
+
+	/*=====================
+	HEADER T
+	=====================*/
+	.header-t {
+		position: relative;
+	}
+
+	.secondary-menu .toggle-btn {
+		display: block;
+	}
+
+
+	.secondary-menu .secondary-menu-list {
+		display: none;
+		position: absolute;
+		top: 100%;
+		left: 15px;
+		right: 15px;
+		width: auto;
+		height: auto;
+		background: var(--white-color);
+		box-shadow: 0 5px 10px rgba(var(--black-color-rgb),0.1);
+		padding: 0 20px;
+		max-height: 44vh;
+		overflow: auto;
+		visibility: visible;
+		z-index: 9;
+		-webkit-transition: none;
+		-moz-transition: none;
+		transition: none;
+		-webkit-transform: none;
+		-moz-transform: none;
+		transform: none;
+	}
+    .secondary-menu .secondary-menu-list  .close {
+		display: block;
+		width: 20px;
+		height: 20px;
+		position: relative;
+		cursor: pointer;
+        background: transparent;
+        margin-left: auto;
+        margin-top: 10px;
+	}
+
+	.secondary-menu .secondary-menu-list  .close::before, 
+	.secondary-menu .secondary-menu-list  .close::after {
+		content: "";
+		background: #333;
+		height: 2px;
+		width: 60%;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		margin: auto;
+		-webkit-transition: all ease 0.35s;
+		-moz-transition: all ease 0.35s;
+		transition: all ease 0.35s;
+		-webkit-transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+
+	.secondary-menu .secondary-menu-list  .close::after {
+		-webkit-transform: rotate(-45deg);
+		-moz-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+	}
+
+	.secondary-menu .secondary-menu-list  .close:hover::before, 
+	.secondary-menu .secondary-menu-list  .close:hover::after {
+		background: #f00;
+	}
+
+	.secondary-menu ul li {
+		display: block;
+	}
+
+	.secondary-menu ul li a {
+		padding: 20px 0;
+		border-bottom: 1px solid rgba(var(--black-color-rgb),0.1);
+		display: block;
+	}
+
+	.secondary-menu ul li .submenu-toggle {
+		top: 0;
+		right: 0;
+		width: 20px;
+		height: 55px;
+		line-height: 55px;
+	}
+
+	.secondary-menu ul ul li.menu-item-has-children .submenu-toggle {
+		right: 0;
+		transform: none;
+		top: 0;
+	}
+
+	.secondary-menu ul li.menu-item-has-children .submenu-toggle.active {
+		-webkit-transform: rotate(180deg);
+		-moz-transform: rotate(180deg);
+		transform: rotate(180deg);
+	}
+
+	.secondary-menu ul ul {
+		padding-left: 10px;
+		position: static;
+		visibility: visible;
+		opacity: 1;
+		box-shadow: none;
+		width: auto;
+		display: none;
+		-webkit-transition: none;
+		-moz-transition: none;
+		transition: none;
+	}
+
+	.secondary-menu ul ul li {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.secondary-menu ul ul li a {
+		border-bottom-style: solid;
+	}
+
+
+}
+.post-layout-two  .site-main article span.category a + a::before {
+    content: "";
+    background: rgba(var(--primary-color-rgb), 0.3);
+    width: 5px;
+    height: 5px;
+    display: inline-block;
+    border-radius: 100%;
+    vertical-align: middle;
+    margin: -2px 8px 0 5px;
+}
+.secondary-menu ul.nav-menu.ps{
+	overflow:unset !important;
+}
+
+@media(min-width:1025px) {
+	.style-one .secondary-menu ul li.menu-item-has-children > a{
+		position: relative;
+	}
+	.style-one .secondary-menu ul li.menu-item-has-children > a::after {
+        content: '';
+        position: absolute;
+        background-image: url("data:image/svg+xml,%3Csvg class='svg-inline--fa fa-chevron-down fa-w-14' aria-hidden='true' data-prefix='fas' data-icon='chevron-down' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' data-fa-i2svg=''%3E%3Cpath fill='currentColor' d='M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z'%3E%3C/path%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        top: 4px;
+        width: 17px;
+        height: 13px;
+		right: 2px;
+    }
+	.style-one .secondary-menu ul li.menu-item-has-children .sub-menu li > a::after{
+		top:17px;
+	}
+	.style-one .secondary-menu ul li .submenu-toggle{
+		display: none;
+	}
+	.style-one .secondary-menu ul li.menu-item-has-children .sub-menu li > a::after,
+	.main-navigation ul li.menu-item-has-children .sub-menu li > a::after{
+       transform: rotate(-90deg);
+   	}
+	.secondary-menu .nav-menu>li:nth-last-of-type(1)>ul ul, .secondary-menu .nav-menu>li:nth-last-of-type(2)>ul ul, .secondary-menu .nav-menu>li:nth-last-of-type(3)>ul ul,
+	.main-navigation ul.nav-menu>li:nth-last-of-type(1)>ul ul, .main-navigation ul.nav-menu>li:nth-last-of-type(2)>ul ul, .main-navigation ul.nav-menu>li:nth-last-of-type(3)>ul ul{
+		left: 100%;
+		right: auto;
+	}
+	.main-navigation ul li.menu-item-has-children:hover > a::after {
+      
+        background-image: url("data:image/svg+xml,%3Csvg class='svg-inline--fa fa-chevron-down fa-w-14' aria-hidden='true' data-prefix='fas' data-icon='chevron-down' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' data-fa-i2svg=''%3E%3Cpath fill='%23CF9C88' d='M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z'%3E%3C/path%3E%3C/svg%3E");
+       
+    }
+
+}
